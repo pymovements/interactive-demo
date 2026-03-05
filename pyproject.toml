@@ -1,0 +1,19 @@
+[project]
+name = "interactive-demo"
+version = "0.1.0"
+description = "Slides for an interactive demo of pymovements."
+readme = "README.md"
+requires-python = ">=3.13, <3.14"
+dependencies = [
+    "jupyterlab>=4.5.5",
+    "pymovements",
+    "ipywidgets",
+]
+
+[tool.uv.sources]
+pymovements = {git = "https://github.com/pymovements/pymovements.git", rev = "8d7fea442df4636343230d28335543445880530e"}
+
+[dependency-groups]
+dev = [
+    "prek>=0.3.4",
+]
