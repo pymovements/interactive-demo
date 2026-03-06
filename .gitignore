@@ -11,3 +11,13 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Data and downloads
+data/
+
+# Tooling caches
+.ruff_cache/
+.pytest_cache/
+
+# OS generated files
+.DS_Store
