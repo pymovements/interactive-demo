@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Büth"
+    given-names: "Carlson"
+    orcid: "https://orcid.org/0000-0003-2298-8438"
+  - family-names: "Shaitarova"
+    given-names: "Anastassia"
+title: "pymovements interactive demo"
+version: 0.26.0+post19.8d7fea44
+date-released: 2026-03-06
+url: "https://github.com/pymovements/interactive-demo"
+repository-code: "https://github.com/pymovements/interactive-demo"
+license: MIT
