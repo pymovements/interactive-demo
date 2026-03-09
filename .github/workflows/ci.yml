@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-notebooks:
+    runs-on: ubuntu-latest
+    container: ghcr.io/astral-sh/uv:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run notebooks
+        run: |
+          export PYTHONWARNINGS=error
+          uv run jupyter nbconvert --execute --to notebook 00_understanding-data.ipynb
+          uv run jupyter nbconvert --execute --to notebook 01_inspect-raw-samples.ipynb
+          uv run jupyter nbconvert --execute --to notebook 02_event-detection.ipynb
+          uv run jupyter nbconvert --execute --to notebook 03_public-datasets.ipynb
+          uv run jupyter nbconvert --execute --to notebook 10_plotting.ipynb
+        working-directory: .
