@@ -1,8 +1,4 @@
 repos:
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.4.1
-    hooks:
-      - id: codespell
   - repo: https://github.com/kynan/nbstripout
     rev: 0.9.1
     hooks:
@@ -22,3 +18,7 @@ repos:
       - id: nbqa-ruff
         args: [ --fix ]
       - id: nbqa-ruff-format
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
